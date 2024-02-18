@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package chatService;
+
+service ChatService{
+  rpc Repeat (RepeatRequest) returns (RepeatResponse);
+  rpc RepeatMultipleTimes(RepeatMultipleTimesRequest) return (RepeatMultipleTimesResponse);
+}
+
+message RepeatRequest{
+  string request = 1;
+}
+
+message RepeatResponse {
+  string response = 1;
+}
